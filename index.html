@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+  
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <style>
+  
+
+  
+  body{
+  font-family: 'Montserrat','Helvetica Neue',sans-serif;
+  text-rendering: optimizeLegibility;
+  
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+//	color: #fff;
+	
+}
+
+.gradientBg{
+	color: #fff !important;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+
+}
+
+.middle-text{
+	font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+}
+
+.double-border{
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	width: 650px;
+	margin: auto;
+}
+
+.header-padding{
+	padding-top: 1%;
+	padding-bottom: 3%;
+	color: #79799a;
+}
+
+.header-text{
+	letter-spacing: 10px;
+}
+
+.white-header{
+	white: #fff;
+}
+
+.buildup-text-white{
+	color: #fff !important;
+}
+
+.buildup-text{
+	width: 370px;
+    margin: auto;
+    border-bottom: 1px solid #d8d8d8;
+    padding-top: 5%;
+    letter-spacing: 4px;
+	color: #79799a;
+}
+
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.jumbo-box{
+background-color: rgba(37, 20, 57, 0.5);
+padding: 25px;
+box-shadow: 2px 2px 10px #333;
+}
+  
+  .top-margin{
+	margin-top: 10%;
+  }
+  
+  .full-height{
+	height: 100vh;
+  }
+  
+  .bg-grey{
+	color: #797979;
+	
+  }
+  
+  .bg-grey h4{
+   color: #333;
+  }
+  
+  .overlay-bg{
+	background-color: rgba(0,0,0,0.4);
+  }
+  
+  .bg-white{
+	background-color: white !important;
+	margin-right: 60px;
+	width: 400px;
+	box-shadow: 2px 2px 15px #4db6ac;
+  }
+  
+  .bg-gradient{
+	background-image: linear-gradient(to right top,#6f87e5,#30c787);
+  }
+  
+  .parallax{
+		//height:700px;
+		background-image: url('src/img/parallax-bg.jpg');
+	  /* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.workflow-text{
+		color: #fff;
+    text-shadow: 2px 2px 10px black
+	}
+  
+  .medium-text{
+	font-size: 20px;
+  }
+  
+  .bg-nav-white{
+	background-color: white;
+  }
+  
+  .vertical-centered{
+	padding-top: 15%;
+  }
+  
+  .nav-pills-white a{
+	  color: white !important;
+	  letter-spacing: 5px
+	}
+  
+  .navbar-items{
+	letter-spacing: 5px;
+	font-size: 12px;
+  }
+  
+  .rounded{
+	font-size: 3rem;
+	background-color: #45b2a6;
+	border-radius: 50% 50% !important;
+	width: 4.5rem;
+	margin: auto;
+	color: #fff;
+  }
+  
+  .call-to-action{
+  background-color: #e0487b;
+margin-top: 20px;
+padding: 10px;
+width: 180px;
+border-radius: 10px;
+color: #fff;
+  }
+  
+  
+  .sized-icon{
+	font-size: 3.5rem;
+  }
+  
+  .ideal-icons{
+	margin: 10px;
+	padding: 5px;
+  }
+  
+  .icon-padding{
+	padding-bottom: 15px;
+	padding-top: 10px;	
+  }
+  
+  
+	.fa-check-circle::before {
+
+		content: "\f058";
+		margin-right: 10px;
+		color: #30c787;
+
+	}
+	
+	.icon-green{
+		color: #30c787;
+	}
+	
+	.icon-orange{
+		color: #ffc65e;
+	}
+	
+	.icon-blue{
+		color: #3f82e5;
+	}
+	
+	.icon-purple{
+		color: #796eff;
+	}
+  
+	.icon-magenta{
+		color: #e0487b;
+	}
+	
+	.white-header{
+	  color: white;
+	  letter-spacing: 10px;
+	}
+
+  .tab-vertical-md {
+    position: relative;
+    box-shadow: 26px 0 26px -12px rgba(100, 111, 121, 0.06);
+	}
+		
+	.tab-vertical-md .tab-vertical__nav-link.active::after {
+		background-color: #21c87a;
+
+	}
+
+.tab-vertical-md .tab-vertical__nav-link::after {
+    position: absolute;
+    right: 0;
+    width: .25rem;
+    height: 10%;
+    background-color: transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    content: " ";
+}
+.tab-vertical .tab-vertical__nav-link.active {
+    color: #21c87a;
+    background-color: transparent;
+}
+  
+  
+.video-bg {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.video-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.video-bg .overlay {
+  background-color: black;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .video-bg {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  .video-bg video {
+    display: none;
+  }
+}
+
+
+.row-fluid [class*="span"]{min-height:0 !important}@media(min-width:1280px){.row-fluid [class*="span"]{min-height:0 !important}}@media(max-width:767px){.ducky-footer-outer{width:100%;background-color:#fff;border-top:1px solid #eceff1;display:flex;justify-content:center;flex-direction:column;border-top:1px solid #eceff1;padding:0}.ducky-footer-container{display:flex;flex-direction:column;justify-items:flex-start;width:100%;padding:0;margin:0 auto;background:transparent}.ducky-footer-block{height:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;max-width:100%;border-top:1px solid #eceff1;padding:16px 16px}.ducky-footer-block-link-wrapper{display:flex;flex-direction:column;max-height:0;overflow:hidden;transition:all 300ms ease-in-out}.ducky-footer-block-title{display:flex;font-size:20px;line-height:20px;font-weight:bold;width:100%;align-items:center;justify-content:space-between}.ducky-footer-block-title-icon{color:#607d8b;font-size:24px;transform:rotate(0);transition:all 300ms ease-in-out;font-size:24px;height:24px;display:flex;flex-direction:column;align-items:center;justify-content:center}.ducky-footer-block-link{font-size:16px;line-height:20px;font-weight:normal;margin-top:8px;margin-bottom:8px;padding-left:16px;color:#546f7a;cursor:pointer;transform:all 300ms ease-in-out}.ducky-footer-block-link:hover{color:#37474f}.ducky-footer-block-title.products{color:#0b87b0}.ducky-footer-block-title.company{color:#9462a6}.ducky-footer-block-title.use-ducky{color:#e0487b}.ducky-footer-block-title.research{color:#679f42}}@media(min-width:768px){.ducky-footer-outer{width:100%;background-color:#fff;border-top:1px solid #eceff1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-top:1px solid #eceff1;padding:40px 0}.ducky-footer-container{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-column-gap:32px;grid-row-gap:16px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;justify-items:stretch;width:100%;max-width:1056px;padding:0 16px;margin:0 auto;background:transparent}.ducky-footer-block{height:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;display:inline-flex;max-width:100%;padding:16px}.ducky-footer-block-title{margin-bottom:16px;font-size:20px;line-height:20px;font-weight:bold}.ducky-footer-block-title-icon{color:transparent}.ducky-footer-block-link-wrapper{display:flex;flex-direction:column}.ducky-footer-block-link{font-size:16px;line-height:20px;font-weight:normal;margin-bottom:8px;color:#546f7a;cursor:pointer;transition:all 150ms ease-in-out;transform-origin:left bottom}.ducky-footer-block-link:hover{transform:scale(1.08);color:#37474f}.ducky-footer-block-title.products{color:#0b87b0}.ducky-footer-block-title.company{color:#9462a6}.ducky-footer-block-title.use-ducky{color:#e0487b}.ducky-footer-block-title.research{color:#679f42}}
+  
+
+.circle {
+  padding: 13px 20px;
+  border-radius: 50%;
+  background-color: #ED8D8D;
+  color: #fff;
+  max-height: 50px;
+  z-index: 2;
+}
+
+.how-it-works.row .col-2 {
+  align-self: stretch;
+}
+.how-it-works.row .col-2::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #ED8D8D;
+  z-index: 1;
+}
+.how-it-works.row .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+.how-it-works.row .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+.how-it-works.row .col-2.top::after {
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+.timeline hr {
+  border-top: 3px solid #ED8D8D;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.timeline .corner {
+  border: 3px solid #ED8D8D;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}  
+
+.last-item{
+  height: 50%;
+}
+  
+  
+  
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+	width: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+
+.roundedImg{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.borderLeft{
+	border-left: 5px solid #007b5e;
+}
+
+.borderRight{
+	border-right: 5px solid #007b5e;
+}
+
+.img-circle{
+border-radius: 50%;
+width: 200px;
+height: 200px;
+}
+
+
+/* ANIMATION PART*/
+
+.slideanim-Y {visibility:hidden;}
+.slide-Y {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the X-axis */
+
+
+.slideanim-X {visibility:hidden;}
+.slide-X {
+  /* The name of the animation */
+  animation-name: slide-X;
+  -webkit-animation-name: slide-X;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+@keyframes slide-X {
+  0% {
+    opacity: 0;
+    transform: translateX(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slide-X {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the X-axis (INVERTED)*/
+
+
+.slideanim-X-inv {visibility:hidden;}
+.slide-X-inv {
+  /* The name of the animation */
+  animation-name: slide-X-inv;
+  -webkit-animation-name: slide-X-inv;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+@keyframes slide-X-inv {
+  0% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(70%);
+  }
+}
+@-webkit-keyframes slide-X-inv {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(70%);
+  }
+}
+
+
+.slideanim-Y-inv {visibility:hidden;}
+.slide-Y-inv {
+  /* The name of the animation */
+  animation-name: slide-invert;
+  -webkit-animation-name: slide-invert;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis (INVERTED)*/
+@keyframes slide-invert {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(70%);
+  }
+}
+@-webkit-keyframes slide-invert {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(70%);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+<!--
+<video id="overlay" autoplay muted  id="myVideo">
+  <source src="src/video/intro.mp4" type="video/mp4">
+</video>-->
+
+
+<header>
+
+
+  <div class=" ">
+  	 <!-- A grey horizontal navbar that becomes vertical on small screens -->
+		<nav class="navbar navbar-expand-md bg-nav-white">
+			<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+				<ul class="navbar-nav mr-auto">
+					<a class="navbar-brand mx-auto" href="#"><img width="110px" src="src/img/DS-Logo.png" /></a>
+				</ul>
+			</div>
+			<div class="mx-auto order-0">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+				<ul class="navbar-nav ml-auto">
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="#">Right</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li> -->
+					
+					<li class="nav-item navbar-items">
+						<a class="nav-link" href="#">ABOUT US</a>
+					</li>
+					<li class="nav-item navbar-items">
+						<a class="nav-link" href="#">SERVICES</a>
+					</li>
+					<li class="nav-item navbar-items">
+						<a class="nav-link" href="#">WORKFLOW</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+  </div>
+
+
+</header>
+
+<div class="container-fluid video-bg " >
+	
+  <video class="overlay" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+
+    <source src="src/video/backgroundvideo.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100 ">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white ">
+		<p class="double-border">
+			The best way to display
+		  <span class="middle-text">
+			Video walls
+		  </span>
+		</p>
+		<button type="button" class="btn call-to-action">Get in Touch!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid full-height bg-grey gradientBg">
+    <!-- Features Section -->
+    <div class="container space-2 space-3--lg vertical-centered medium-text">
+      <div class="row justify-content-lg-between  ">
+        <div class="col-md-4 col-lg-4 mb-7 mb-md-0">
+          <div class="tab-vertical tab-vertical-md py-5 mr-lg-7">
+            <div class="pr-md-7 mb-5">
+              <h3 class="h4">Know more about us</h3>
+            </div>
+
+            <!-- Tab Nav -->
+            <div class="nav flex-column nav-pills nav-pills-white slideanim-Y" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link tab-vertical__nav-link active" id="v-pills-features-tab" data-toggle="pill" href="#v-pills-features" role="tab" aria-controls="v-pills-features" aria-selected="true">
+                1. Strategy and vision
+              </a>
+              <a class="nav-link tab-vertical__nav-link" id="v-pills-key-benefits-tab" data-toggle="pill" href="#v-pills-key-benefits" role="tab" aria-controls="v-pills-key-benefits" aria-selected="false">
+                2. Our Team
+              </a>
+              <a class="nav-link tab-vertical__nav-link" id="v-pills-company-tab" data-toggle="pill" href="#v-pills-company" role="tab" aria-controls="v-pills-company" aria-selected="false">
+                3. Why choose us
+              </a>
+            </div>
+            <!-- End Tab Nav -->
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <!-- Tab Content -->
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade active show slideanim-X" id="v-pills-features" role="tabpanel" aria-labelledby="v-pills-features-tab">
+              <div class="row row-eq-height">
+                <div class="col-sm-6 mb-7 mb-sm-9">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    
+					<p>This is where we sit down, grab a cup of coffee 
+and dial in the details. Understanding the task at hand and ironing out 
+the wrinkles is key.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-sm-6 mb-7 mb-sm-9">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>Now that we've aligned the details, it's time to 
+get things mapped out and organized. This part is really crucial in 
+keeping the project in line to completion.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-sm-6 mb-7 mb-sm-0">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>The time has come to bring those ideas and plans 
+to life. This is where we really begin to visualize your napkin sketches
+ and make them into beautiful pixels.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-sm-6">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>Whether through commerce or just an experience to
+ tell your brand's story, the time has come to start using development 
+languages that fit your projects needs.</p>
+                    
+                  </div><br>
+                  <!-- End Icon Block -->
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-key-benefits" role="tabpanel" aria-labelledby="v-pills-key-benefits-tab">
+              <div class="row align-items-lg-center">
+                <div class="col-lg-5 mb-7 mb-7 mb-lg-0">
+                  <img class="img-fluid" src="src/img/example.png" alt="Image Description">
+                </div>
+
+                <div class="col-lg-7">
+                  <!-- Description -->
+                  <div class="pl-lg-4">
+                    <span class="u-label u-label--sm u-label--purple mb-3">Integrations</span>
+                    <h2 class="h3 mb-3">Key benefits of Space template</h2>
+                    <p>The time has come to bring those ideas and plans 
+to life. This is where we really begin to visualize your napkin sketches
+ and make them into beautiful pixels.</p>
+                    <p>Now that we've aligned the details, it's time to 
+get things mapped out and organized. This part is really crucial in 
+keeping the project in line to completion.</p>
+                   
+                  </div>
+                  <!-- End Description -->
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-company" role="tabpanel" aria-labelledby="v-pills-company-tab">
+              <div class="row">
+                <div class="col-sm-6 mb-7 mb-sm-9">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>Now that your brand is all dressed up and ready 
+to party, it's time to release it to the world. By the way, let's 
+celebrate already.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-sm-6 mb-7 mb-sm-9">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>We get it, you're busy and it's important that 
+someone keeps up with marketing and driving people to your brand. We've 
+got you covered.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-sm-6 mb-7 mb-md-9">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>It's important to stay detail oriented with every
+ project we tackle. Staying focused allows us to turn every project we 
+complete into something we love.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-sm-6">
+                  <!-- Icon Block -->
+                  <div class="pr-lg-4">
+                    <p>We strive to embrace and drive change in our industry which allows us to keep our clients relevant and ready to adapt.</p>
+                    
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Tab Content -->
+        </div>
+      </div>
+    </div>
+    <!-- End Features Section -->
+</div>
+
+
+<div class="container top-margin full-height bg-grey">
+  <div class="row">
+    <div class="col-sm-6 slideanim-Y">
+      <h2><strong>What We</strong> Offer</h2><br>
+      <p>Our solutions are geared towards aiding our clients build and advertise their products and brand in the best way possible.</p>
+	 </div>
+	<div class="col-sm-3 slideanim-X">
+		<i class="fas fa-globe-europe sized-icon icon-green icon-padding"></i>
+      <h4>Pan-European Deployment</h2><br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+    </div>
+	<div class="col-sm-3 slideanim-X">
+	<i class="fas fa-redo sized-icon icon-magenta icon-padding"></i>
+      <h4>Firm ware upgrade</h2><br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+	<div class="col-sm-3 slideanim-Y">
+	<i class="fas fa-chalkboard-teacher sized-icon icon-purple icon-padding" ></i>
+      <h4>Software Installation</h2><br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+	<div class="col-sm-3 slideanim-Y">
+	<i class="fas fa-info-circle sized-icon icon-orange icon-padding"></i>
+      <h4>Support & Services</h2><br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+	<div class="col-sm-3 slideanim-Y">
+	<i class="fas fa-tasks sized-icon icon-blue icon-padding"></i>
+      <h4>Project Management</h2><br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+	<div class="col-sm-3 slideanim-Y">
+	<i class="fas fa-network-wired sized-icon icon-green icon-padding"></i>
+      <h4>Installation</h2><br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- IDEAL FOR SECTION -->
+<div class="parallax" >
+	<div class="container-fluid h-100 overlay-bg">
+		<div class="container-fluid  full-height text-center"><br>
+			<p class="text-center buildup-text buildup-text-white slideanim-Y-inv"> We have the expertise</p>
+			<h2 class="text-center header-padding header-text white-header slideanim-Y-inv">OUR SOLUTIONS</h2>
+		  
+		  <div class="row justify-content-md-center text-left ">
+			
+			<div class="col-sm-auto bg-white slideanim-X-inv">
+					<i class="fas fa-check-circle ideal-icons">Airports</i><br>
+					<i class="fas fa-check-circle ideal-icons">Train stations</i><br>
+					<i class="fas fa-check-circle ideal-icons">University campuses and retail stores</i><br>
+					<i class="fas fa-check-circle ideal-icons">Corporate communication</i><br>
+					<i class="fas fa-check-circle ideal-icons">Quick service restaurants</i><br>
+					<i class="fas fa-check-circle ideal-icons">Retail</i><br>
+				
+			</div>
+			<div class="col-sm-auto bg-white slideanim-X">
+				
+					<i class="fas fa-check-circle ideal-icons">Banking & finance</i><br>
+					<i class="fas fa-check-circle ideal-icons">Government</i><br>
+					<i class="fas fa-check-circle ideal-icons">Education</i><br>
+					<i class="fas fa-check-circle ideal-icons">Transportation & Automotive</i><br>
+					<i class="fas fa-check-circle ideal-icons">Entertainment</i><br>
+					<i class="fas fa-check-circle ideal-icons">Hotel & casino</i><br>
+					
+				
+			</div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+
+<div id="about" class="container full-height">
+<p class="text-center buildup-text slideanim-Y-inv"> Learn more about our services!</p>
+<h2 class="text-center header-padding header-text slideanim-Y-inv">SERVICES</h2>
+
+<h2>  </h2>
+  <div class="row text-center slideanim-Y-inv">
+  
+  
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-film"></i></div>
+							<h4 class="card-title">Media players</h4>
+							<p class="card-text"></p>
+						</div>
+					</div>
+				</div>
+				<div class="backside ">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+						<div class="rounded"><i class="fas fa-film"></i></div>
+							<h4 class="card-title">Media players</h4>
+							<p class="card-text"> Lorem ipsum dolor mea...</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+ 	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y-inv">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-tv"></i></div>
+							<h4 class="card-title">High-quality displays</h4>
+						</div>
+					</div>
+				</div>
+				<div class="backside">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+							<div class="rounded"><i class="fas fa-tv"></i></div>
+							<h4 class="card-title">High-quality displays</h4>
+							<p class="card-text">Lorem ipsum dolor mea...</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y-inv">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-toolbox"></i></div>
+							<h4 class="card-title">Deployment and maintenance</h4>
+						</div>
+					</div>
+				</div>
+				<div class="backside">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+							<div class="rounded"><i class="fas fa-toolbox"></i></div>
+							<h4 class="card-title">Deployment and maintenance</h4>
+							<p class="card-text">Lorem ipsum dolor mea...</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-server"></i></div>
+							<h4 class="card-title">Digital signage servers</h4>
+						</div>
+					</div>
+				</div>
+				<div class="backside">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+							<div class="rounded"><i class="fas fa-server"></i></div>
+							<h4 class="card-title">Digital signage servers</h4>
+							<p class="card-text">Lorem ipsum dolor mea...</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-tools"></i></div>
+							<h4 class="card-title">After-sales support</h4>
+						</div>
+					</div>
+				</div>
+				<div class="backside">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+							<div class="rounded"><i class="fas fa-tools"></i></div>
+							<h4 class="card-title">After-sales support</h4>
+							<p class="card-text">Lorem ipsum dolor mea...</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-digital-tachograph"></i></div>
+							<h4 class="card-title">Digital signage software solutions</h4>
+						</div>
+					</div>
+				</div>
+				<div class="backside">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+							<div class="rounded"><i class="fas fa-digital-tachograph"></i></div>
+							<h4 class="card-title">Digital signage software solutions</h4>
+							<p class="card-text">Lorem ipsum dolor mea...</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+<!-- 	<div class="col-xs-12 col-sm-6 col-md-4">
+		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+			<div class="mainflip">
+				<div class="frontside">
+					<div class="card">
+						<div class="card-body text-center">
+							<div class="rounded"><i class="fas fa-ethernet"></i></div>
+							<h4 class="card-title">Installation</h4>
+							<p class="card-text"></p>
+							<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="backside">
+					<div class="card">
+						<div class="card-body text-center mt-4">
+							<h4 class="card-title">Installation</h4>
+							<p class="card-text"></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ -->
+	
+  </div>
+</div>
+
+<div class="parallax workflow-text" >
+<div class="container-fluid h-100 overlay-bg">
+
+<div id="workflow" class="container-fluid text-center top-margin slideanim-Y">
+
+  <div class="container">
+    <p class="text-center buildup-text buildup-text-white"> Learn more about how we work!</p>
+	<h2 class="text-center header-padding header-text white-header ">OUR WORKFLOW</h2>
+    <!--first section-->
+    <div class="row align-items-center how-it-works d-flex">
+      <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+        <div class="circle font-weight-bold">1</div>
+      </div>
+      <div class="col-6 text-left">
+        <h5>Project Brief</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+    </div>
+    <!--path between 1-2-->
+    <div class="row timeline">
+      <div class="col-2">
+        <div class="corner top-right"></div>
+      </div>
+      <div class="col-8">
+        <hr/>
+      </div>
+      <div class="col-2">
+        <div class="corner left-bottom"></div>
+      </div>
+    </div>
+    <!--second section-->
+    <div class="row align-items-center justify-content-end how-it-works d-flex">
+      <div class="col-6 text-right">
+        <h5>Choose Location</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+      <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+        <div class="circle font-weight-bold">2</div>
+      </div>
+    </div>
+    <!--path between 2-3-->
+    <div class="row timeline">
+      <div class="col-2">
+        <div class="corner right-bottom"></div>
+      </div>
+      <div class="col-8">
+        <hr/>
+      </div>
+      <div class="col-2">
+        <div class="corner top-left"></div>
+      </div>
+    </div>
+    <!--third section-->
+    <div class="row align-items-center how-it-works d-flex">
+      <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+        <div class="circle font-weight-bold">3</div>
+      </div>
+      <div class="col-6 text-left">
+        <h5>Choose Screen</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+	  
+    </div>
+	<!--path between 3-4-->
+    <div class="row timeline">
+      <div class="col-2">
+        <div class="corner top-right"></div>
+      </div>
+      <div class="col-8">
+        <hr/>
+      </div>
+      <div class="col-2">
+        <div class="corner left-bottom"></div>
+      </div>
+    </div>
+	<!--4 section-->
+    <div class="row align-items-center justify-content-end how-it-works d-flex">
+      <div class="col-6 text-right">
+        <h5>Networked plug & play</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+      <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+        <div class="circle font-weight-bold">4</div>
+      </div>
+    </div>
+	<!-- path between 4-5 -->
+	 <div class="row timeline">
+      <div class="col-2">
+        <div class="corner right-bottom"></div>
+      </div>
+      <div class="col-8">
+        <hr/>
+      </div>
+      <div class="col-2">
+        <div class="corner top-left"></div>
+      </div>
+    </div>
+	<div class="row align-items-center how-it-works d-flex">
+      <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center last-item">
+        <div class="circle font-weight-bold">5</div>
+      </div>
+      <div class="col-6 text-left">
+        <h5>Installation</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+      </div>
+	  
+    </div>
+	
+  </div>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="container-fluid">
+<p class="text-center buildup-text slideanim-Y-inv" > Check out some of our previous work!</p>
+<h2 class="text-center header-padding header-text slideanim-Y-inv">OUR REFERENCES</h2>
+
+
+<div id="mapid" class="slideanim-X" style="width: 100%; height: 400px;"></div>
+<script>
+
+	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
+	
+	var template = "";
+	
+	L.marker([51.5, -0.09]).addTo(mymap)
+		.bindPopup("<b>One of our reference work!</b><br />Here comes the details, even some pictures!")
+	
+	//var popup = L.popup();
+
+</script>
+
+</div>
+
+
+ <div class="container bg-grey">
+	
+	<p class="text-center buildup-text slideanim-Y"> We would love to hear from you!</p>
+	<h2 class="text-center header-padding header-text slideanim-Y">CONTACT</h2>
+  <div class="row">
+
+    <div class="col-sm-7 slideanim-X">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-success text-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+	<div class="col-sm-5 slideanim-X-inv">
+      <p>Contact us and we'll get back to you soon!</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> London, UK</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +44 1515151515</p>
+    </div>
+  </div>
+</div> 
+
+
+<!-- FOOTER -->
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="min-height:0px;" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_15275476967863248" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="ducky-footer-outer">
+  <div class="ducky-footer-container">
+
+    <div class="ducky-footer-block">
+      <div class="ducky-footer-block-title products">Products <i class="ducky-footer-block-title-icon icon-keyboard_arrow_right"></i></div>
+      <div class="ducky-footer-block-link-wrapper">
+        <a href="https://www.ducky.eco/business?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/schools?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/climate-data-api?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/case-studies?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+      </div>
+    </div>
+    <div class="ducky-footer-block">
+      <div class="ducky-footer-block-title company">Partners<i class="ducky-footer-block-title-icon icon-keyboard_arrow_right"></i></div>
+      <div class="ducky-footer-block-link-wrapper">
+        <a href="https://www.ducky.eco/investors?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/about?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/jobs?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/organisation?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        
+      </div>
+    </div>
+    <div class="ducky-footer-block">
+      <div class="ducky-footer-block-title use-ducky">Services<i class="ducky-footer-block-title-icon icon-keyboard_arrow_right"></i></div>
+      <div class="ducky-footer-block-link-wrapper">
+        <a href="https://challenge.ducky.eco/en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://footprint.ducky.eco/en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/terms?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://ducky.drift.help/" class="ducky-footer-block-link">Lorem ipsum</a>
+      </div>
+    </div>
+    <div class="ducky-footer-block">
+      <div class="ducky-footer-block-title research">Learn More <i class="ducky-footer-block-title-icon icon-keyboard_arrow_right"></i></div>
+      <div class="ducky-footer-block-link-wrapper">
+        <a href="https://www.ducky.eco/climate-communication?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/climate-psychology?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://www.ducky.eco/climate-data?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+        <a href="https://blog.ducky.eco/?hsLang=en" class="ducky-footer-block-link">Lorem ipsum</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(window).scroll(function() {
+  $(".slideanim-Y").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide-Y");
+    }
+  });
+  
+  $(".slideanim-Y-inv").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide-Y-inv");
+    }
+  });
+  
+   $(".slideanim-X").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide-X");
+    }
+  });
+  
+   $(".slideanim-X-inv").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide-X-inv");
+    }
+  });
+  
+}); 
+</script>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="min-height:0px" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_15275476998023250" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1525562915398919" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        alert("LOADED");
+		document.getElementById("overlay").style.display = "none";
+    };
+	
+
+
+</script>
+
+</body>
+</html>
