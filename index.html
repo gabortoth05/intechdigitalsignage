@@ -41,8 +41,8 @@ body {
 
 .gradientBg{
 	color: #fff !important;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+	//background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	//background-size: 400% 400%;
 	animation: gradientBG 15s ease infinite;
 
 }
@@ -91,6 +91,18 @@ body {
     letter-spacing: 4px;
 	color: #79799a;
 }
+
+.contact-text{
+  color: #fff !important;
+  letter-spacing: 0.3rem;
+}
+  
+.header-text-white{
+  color: #fff !important;
+  
+}
+
+
 
 
 @keyframes gradientBG {
@@ -144,9 +156,47 @@ box-shadow: 2px 2px 10px #333;
 	background-image: linear-gradient(to right top,#6f87e5,#30c787);
   }
   
+  .services-parallax{
+	background-image:url('sample3.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+  .services-parallax-overlay{
+	background-color:rgba(0,0,0,0.55);
+  }
+  
+  .aboutus-parallax{
+	background-image:url('sample1.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+  .aboutus-parallax-overlay{
+	background-color:rgba(0,0,0,0.55);
+  }
+  
+  
+  .contactus-parallax-overlay{
+	background-color:rgba(0,0,0,0.55);
+  }
+  
+  .contactus-parallax{
+	background-image:url('contact.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  
+  }
+  
   .parallax{
 		//height:700px;
-		background-image: url('parallax-bg.jpg');
+		background-image: url('src/img/parallax-bg.jpg');
 	  /* Create the parallax scrolling effect */
 		background-attachment: fixed;
 		background-position: center;
@@ -183,7 +233,7 @@ box-shadow: 2px 2px 10px #333;
   
   .rounded{
 	font-size: 3rem;
-	background-color: #45b2a6;
+	//background-color: #45b2a6;
 	border-radius: 50% 50% !important;
 	width: 4.5rem;
 	margin: auto;
@@ -488,7 +538,8 @@ color: #fff;
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: #007b5e !important;
+    //color: #007b5e !important;
+	color: #fff;
 }
 
 .frontside .card .card-body img {
@@ -502,6 +553,7 @@ color: #fff;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	color: #fff;
 }
 
 .borderLeft{
@@ -678,7 +730,7 @@ height: 200px;
 		<nav class="navbar navbar-expand-md bg-nav-white">
 			<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
 				<ul class="navbar-nav mr-auto">
-					<a class="navbar-brand mx-auto" href="#"><img width="110px" src="DS-Logo.PNG" /></a>
+					<a class="navbar-brand mx-auto" href="#"><img width="110px" src="src/img/DS-Logo.png" /></a>
 				</ul>
 			</div>
 			<div class="mx-auto order-0">
@@ -717,7 +769,7 @@ height: 200px;
 	
   <video class="overlay" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
 
-    <source src="backgroundvideo.mp4" type="video/mp4">
+    <source src="src/video/backgroundvideo.mp4" type="video/mp4">
   </video>
   <div class="container h-100 ">
     <div class="d-flex h-100 text-center align-items-center">
@@ -734,162 +786,166 @@ height: 200px;
   </div>
 </div>
 
+<div class="aboutus-parallax">
+	<div class="aboutus-parallax-overlay">
+		<div class="container-fluid full-height bg-grey gradientBg">
+			<!-- Features Section -->
+			<div class="container space-2 space-3--lg vertical-centered medium-text">
+			  <div class="row justify-content-lg-between  ">
+				<div class="col-md-4 col-lg-4 mb-7 mb-md-0">
+				  <div class="tab-vertical tab-vertical-md py-5 mr-lg-7">
+					<div class="pr-md-7 mb-5">
+					  <h3 class="h4">Know more about us</h3>
+					</div>
 
+					<!-- Tab Nav -->
+					<div class="nav flex-column nav-pills nav-pills-white slideanim-Y" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					  <a class="nav-link tab-vertical__nav-link active" id="v-pills-features-tab" data-toggle="pill" href="#v-pills-features" role="tab" aria-controls="v-pills-features" aria-selected="true">
+						1. Strategy and vision
+					  </a>
+					  <a class="nav-link tab-vertical__nav-link" id="v-pills-key-benefits-tab" data-toggle="pill" href="#v-pills-key-benefits" role="tab" aria-controls="v-pills-key-benefits" aria-selected="false">
+						2. Our Team
+					  </a>
+					  <a class="nav-link tab-vertical__nav-link" id="v-pills-company-tab" data-toggle="pill" href="#v-pills-company" role="tab" aria-controls="v-pills-company" aria-selected="false">
+						3. Why choose us
+					  </a>
+					</div>
+					<!-- End Tab Nav -->
+				  </div>
+				</div>
 
-<div class="container-fluid full-height bg-grey gradientBg">
-    <!-- Features Section -->
-    <div class="container space-2 space-3--lg vertical-centered medium-text">
-      <div class="row justify-content-lg-between  ">
-        <div class="col-md-4 col-lg-4 mb-7 mb-md-0">
-          <div class="tab-vertical tab-vertical-md py-5 mr-lg-7">
-            <div class="pr-md-7 mb-5">
-              <h3 class="h4">Know more about us</h3>
-            </div>
+				<div class="col-md-8">
+				  <!-- Tab Content -->
+				  <div class="tab-content" id="v-pills-tabContent">
+					<div class="tab-pane fade active show slideanim-X" id="v-pills-features" role="tabpanel" aria-labelledby="v-pills-features-tab">
+					  <div class="row row-eq-height">
+						<div class="col-sm-6 mb-7 mb-sm-9">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							
+							<p>This is where we sit down, grab a cup of coffee 
+		and dial in the details. Understanding the task at hand and ironing out 
+		the wrinkles is key.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
 
-            <!-- Tab Nav -->
-            <div class="nav flex-column nav-pills nav-pills-white slideanim-Y" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link tab-vertical__nav-link active" id="v-pills-features-tab" data-toggle="pill" href="#v-pills-features" role="tab" aria-controls="v-pills-features" aria-selected="true">
-                1. Strategy and vision
-              </a>
-              <a class="nav-link tab-vertical__nav-link" id="v-pills-key-benefits-tab" data-toggle="pill" href="#v-pills-key-benefits" role="tab" aria-controls="v-pills-key-benefits" aria-selected="false">
-                2. Our Team
-              </a>
-              <a class="nav-link tab-vertical__nav-link" id="v-pills-company-tab" data-toggle="pill" href="#v-pills-company" role="tab" aria-controls="v-pills-company" aria-selected="false">
-                3. Why choose us
-              </a>
-            </div>
-            <!-- End Tab Nav -->
-          </div>
-        </div>
+						<div class="col-sm-6 mb-7 mb-sm-9">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>Now that we've aligned the details, it's time to 
+		get things mapped out and organized. This part is really crucial in 
+		keeping the project in line to completion.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
 
-        <div class="col-md-8">
-          <!-- Tab Content -->
-          <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade active show slideanim-X" id="v-pills-features" role="tabpanel" aria-labelledby="v-pills-features-tab">
-              <div class="row row-eq-height">
-                <div class="col-sm-6 mb-7 mb-sm-9">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    
-					<p>This is where we sit down, grab a cup of coffee 
-and dial in the details. Understanding the task at hand and ironing out 
-the wrinkles is key.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
+						<div class="col-sm-6 mb-7 mb-sm-0">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>The time has come to bring those ideas and plans 
+		to life. This is where we really begin to visualize your napkin sketches
+		 and make them into beautiful pixels.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
 
-                <div class="col-sm-6 mb-7 mb-sm-9">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>Now that we've aligned the details, it's time to 
-get things mapped out and organized. This part is really crucial in 
-keeping the project in line to completion.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
+						<div class="col-sm-6">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>Whether through commerce or just an experience to
+		 tell your brand's story, the time has come to start using development 
+		languages that fit your projects needs.</p>
+							
+						  </div><br>
+						  <!-- End Icon Block -->
+						</div>
+					  </div>
+					</div>
 
-                <div class="col-sm-6 mb-7 mb-sm-0">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>The time has come to bring those ideas and plans 
-to life. This is where we really begin to visualize your napkin sketches
- and make them into beautiful pixels.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
+					<div class="tab-pane fade" id="v-pills-key-benefits" role="tabpanel" aria-labelledby="v-pills-key-benefits-tab">
+					  <div class="row align-items-lg-center">
+						<div class="col-lg-5 mb-7 mb-7 mb-lg-0">
+						  <img class="img-fluid" src="src/img/example.png" alt="Image Description">
+						</div>
 
-                <div class="col-sm-6">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>Whether through commerce or just an experience to
- tell your brand's story, the time has come to start using development 
-languages that fit your projects needs.</p>
-                    
-                  </div><br>
-                  <!-- End Icon Block -->
-                </div>
-              </div>
-            </div>
+						<div class="col-lg-7">
+						  <!-- Description -->
+						  <div class="pl-lg-4">
+							<span class="u-label u-label--sm u-label--purple mb-3">Integrations</span>
+							<h2 class="h3 mb-3">Key benefits of Space template</h2>
+							<p>The time has come to bring those ideas and plans 
+		to life. This is where we really begin to visualize your napkin sketches
+		 and make them into beautiful pixels.</p>
+							<p>Now that we've aligned the details, it's time to 
+		get things mapped out and organized. This part is really crucial in 
+		keeping the project in line to completion.</p>
+						   
+						  </div>
+						  <!-- End Description -->
+						</div>
+					  </div>
+					</div>
 
-            <div class="tab-pane fade" id="v-pills-key-benefits" role="tabpanel" aria-labelledby="v-pills-key-benefits-tab">
-              <div class="row align-items-lg-center">
-                <div class="col-lg-5 mb-7 mb-7 mb-lg-0">
-                  <img class="img-fluid" src="example.png" alt="Image Description">
-                </div>
+					<div class="tab-pane fade" id="v-pills-company" role="tabpanel" aria-labelledby="v-pills-company-tab">
+					  <div class="row">
+						<div class="col-sm-6 mb-7 mb-sm-9">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>Now that your brand is all dressed up and ready 
+		to party, it's time to release it to the world. By the way, let's 
+		celebrate already.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
 
-                <div class="col-lg-7">
-                  <!-- Description -->
-                  <div class="pl-lg-4">
-                    <span class="u-label u-label--sm u-label--purple mb-3">Integrations</span>
-                    <h2 class="h3 mb-3">Key benefits of Space template</h2>
-                    <p>The time has come to bring those ideas and plans 
-to life. This is where we really begin to visualize your napkin sketches
- and make them into beautiful pixels.</p>
-                    <p>Now that we've aligned the details, it's time to 
-get things mapped out and organized. This part is really crucial in 
-keeping the project in line to completion.</p>
-                   
-                  </div>
-                  <!-- End Description -->
-                </div>
-              </div>
-            </div>
+						<div class="col-sm-6 mb-7 mb-sm-9">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>We get it, you're busy and it's important that 
+		someone keeps up with marketing and driving people to your brand. We've 
+		got you covered.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
 
-            <div class="tab-pane fade" id="v-pills-company" role="tabpanel" aria-labelledby="v-pills-company-tab">
-              <div class="row">
-                <div class="col-sm-6 mb-7 mb-sm-9">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>Now that your brand is all dressed up and ready 
-to party, it's time to release it to the world. By the way, let's 
-celebrate already.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
+						<div class="col-sm-6 mb-7 mb-md-9">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>It's important to stay detail oriented with every
+		 project we tackle. Staying focused allows us to turn every project we 
+		complete into something we love.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
 
-                <div class="col-sm-6 mb-7 mb-sm-9">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>We get it, you're busy and it's important that 
-someone keeps up with marketing and driving people to your brand. We've 
-got you covered.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
-
-                <div class="col-sm-6 mb-7 mb-md-9">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>It's important to stay detail oriented with every
- project we tackle. Staying focused allows us to turn every project we 
-complete into something we love.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
-
-                <div class="col-sm-6">
-                  <!-- Icon Block -->
-                  <div class="pr-lg-4">
-                    <p>We strive to embrace and drive change in our industry which allows us to keep our clients relevant and ready to adapt.</p>
-                    
-                  </div>
-                  <!-- End Icon Block -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Tab Content -->
-        </div>
-      </div>
-    </div>
-    <!-- End Features Section -->
+						<div class="col-sm-6">
+						  <!-- Icon Block -->
+						  <div class="pr-lg-4">
+							<p>We strive to embrace and drive change in our industry which allows us to keep our clients relevant and ready to adapt.</p>
+							
+						  </div>
+						  <!-- End Icon Block -->
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <!-- End Tab Content -->
+				</div>
+			  </div>
+			</div>
+			<!-- End Features Section -->
+		</div>
+	</div>
 </div>
+
+
 
 
 <div class="container top-margin full-height bg-grey">
@@ -967,200 +1023,204 @@ complete into something we love.</p>
 	</div>
 </div>
 
+<div class="services-parallax" >
+	<div class="services-parallax-overlay" >
+		<div id="about" class="container h-100 full-height">
+		<p class="text-center buildup-text buildup-text-white slideanim-Y-inv"> Learn more about our services!</p>
+		<h2 class="text-center header-padding header-text white-header slideanim-Y-inv">SERVICES</h2>
 
-<div id="about" class="container full-height">
-<p class="text-center buildup-text slideanim-Y-inv"> Learn more about our services!</p>
-<h2 class="text-center header-padding header-text slideanim-Y-inv">SERVICES</h2>
-
-<h2>  </h2>
-  <div class="row text-center slideanim-Y-inv">
-  
-  
-	<div class="col-xs-12 col-sm-6 col-md-4">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-film"></i></div>
-							<h4 class="card-title">Media players</h4>
-							<p class="card-text"></p>
+		<h2>  </h2>
+		  <div class="row text-center slideanim-Y-inv">
+		  
+		  
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card" style="background-color:#4db6ac !important">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-film"></i></div>
+									<h4 class="card-title">Media players</h4>
+									<p class="card-text"></p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="backside ">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-						<div class="rounded"><i class="fas fa-film"></i></div>
-							<h4 class="card-title">Media players</h4>
-							<p class="card-text"> Lorem ipsum dolor mea...</p>
+						<div class="backside ">
+							<div class="card" style="background-color:#4db6ac !important">
+								<div class="card-body text-center mt-4">
+								<div class="rounded"><i class="fas fa-film"></i></div>
+									<h4 class="card-title">Media players</h4>
+									<p class="card-text"> Lorem ipsum dolor mea...</p>
 
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-  
- 	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y-inv">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-tv"></i></div>
-							<h4 class="card-title">High-quality displays</h4>
+		  
+			<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y-inv">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card" style="background-color:#e91e63  !important">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-tv"></i></div>
+									<h4 class="card-title">High-quality displays</h4>
+								</div>
+							</div>
+						</div>
+						<div class="backside">
+							<div class="card" style="background-color:#e91e63  !important">
+								<div class="card-body text-center mt-4">
+									<div class="rounded"><i class="fas fa-tv"></i></div>
+									<h4 class="card-title">High-quality displays</h4>
+									<p class="card-text">Lorem ipsum dolor mea...</p>
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="backside">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-							<div class="rounded"><i class="fas fa-tv"></i></div>
-							<h4 class="card-title">High-quality displays</h4>
-							<p class="card-text">Lorem ipsum dolor mea...</p>
+			</div> 
 
+			<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y-inv">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card" style="background-color:#ffc107  !important">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-toolbox"></i></div>
+									<h4 class="card-title">Deployment and maintenance</h4>
+								</div>
+							</div>
+						</div>
+						<div class="backside">
+							<div class="card" style="background-color:#ffc107  !important">
+								<div class="card-body text-center mt-4">
+									<div class="rounded"><i class="fas fa-toolbox"></i></div>
+									<h4 class="card-title">Deployment and maintenance</h4>
+									<p class="card-text">Lorem ipsum dolor mea...</p>
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div> 
-
-	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y-inv">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-toolbox"></i></div>
-							<h4 class="card-title">Deployment and maintenance</h4>
+			
+			<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card" style="background-color:#ffc107  !important">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-server"></i></div>
+									<h4 class="card-title">Digital signage servers</h4>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="backside">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-							<div class="rounded"><i class="fas fa-toolbox"></i></div>
-							<h4 class="card-title">Deployment and maintenance</h4>
-							<p class="card-text">Lorem ipsum dolor mea...</p>
+						<div class="backside">
+							<div class="card" style="background-color:#ffc107  !important">
+								<div class="card-body text-center mt-4">
+									<div class="rounded"><i class="fas fa-server"></i></div>
+									<h4 class="card-title">Digital signage servers</h4>
+									<p class="card-text">Lorem ipsum dolor mea...</p>
 
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
-	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-server"></i></div>
-							<h4 class="card-title">Digital signage servers</h4>
+
+			<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card"  style="background-color:#e91e63  !important">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-tools"></i></div>
+									<h4 class="card-title">After-sales support</h4>
+								</div>
+							</div>
+						</div>
+						<div class="backside">
+							<div class="card"  style="background-color:#e91e63  !important">
+								<div class="card-body text-center mt-4">
+									<div class="rounded"><i class="fas fa-tools"></i></div>
+									<h4 class="card-title">After-sales support</h4>
+									<p class="card-text">Lorem ipsum dolor mea...</p>
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="backside">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-							<div class="rounded"><i class="fas fa-server"></i></div>
-							<h4 class="card-title">Digital signage servers</h4>
-							<p class="card-text">Lorem ipsum dolor mea...</p>
+			</div>	
+			
+			<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card" style="background-color:#4db6ac !important">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-digital-tachograph"></i></div>
+									<h4 class="card-title">Digital signage software solutions</h4>
+								</div>
+							</div>
+						</div>
+						<div class="backside">
+							<div class="card" style="background-color:#4db6ac !important">
+								<div class="card-body text-center mt-4">
+									<div class="rounded"><i class="fas fa-digital-tachograph"></i></div>
+									<h4 class="card-title">Digital signage software solutions</h4>
+									<p class="card-text">Lorem ipsum dolor mea...</p>
 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			
+		<!-- 	<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+					<div class="mainflip">
+						<div class="frontside">
+							<div class="card">
+								<div class="card-body text-center">
+									<div class="rounded"><i class="fas fa-ethernet"></i></div>
+									<h4 class="card-title">Installation</h4>
+									<p class="card-text"></p>
+									<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="backside">
+							<div class="card">
+								<div class="card-body text-center mt-4">
+									<h4 class="card-title">Installation</h4>
+									<p class="card-text"></p>
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-tools"></i></div>
-							<h4 class="card-title">After-sales support</h4>
-						</div>
-					</div>
-				</div>
-				<div class="backside">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-							<div class="rounded"><i class="fas fa-tools"></i></div>
-							<h4 class="card-title">After-sales support</h4>
-							<p class="card-text">Lorem ipsum dolor mea...</p>
-
-						</div>
-					</div>
-				</div>
-			</div>
+		 -->
+			
+		  </div>
 		</div>
 	</div>	
-	
-	<div class="col-xs-12 col-sm-6 col-md-4 slideanim-Y">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-digital-tachograph"></i></div>
-							<h4 class="card-title">Digital signage software solutions</h4>
-						</div>
-					</div>
-				</div>
-				<div class="backside">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-							<div class="rounded"><i class="fas fa-digital-tachograph"></i></div>
-							<h4 class="card-title">Digital signage software solutions</h4>
-							<p class="card-text">Lorem ipsum dolor mea...</p>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>	
-	
-<!-- 	<div class="col-xs-12 col-sm-6 col-md-4">
-		<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-			<div class="mainflip">
-				<div class="frontside">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="rounded"><i class="fas fa-ethernet"></i></div>
-							<h4 class="card-title">Installation</h4>
-							<p class="card-text"></p>
-							<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="backside">
-					<div class="card">
-						<div class="card-body text-center mt-4">
-							<h4 class="card-title">Installation</h4>
-							<p class="card-text"></p>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
- -->
-	
-  </div>
 </div>
+
 
 <div class="parallax workflow-text" >
 <div class="container-fluid h-100 overlay-bg">
 
-<div id="workflow" class="container-fluid text-center top-margin slideanim-Y">
+<div id="workflow" class="container-fluid text-center slideanim-Y">
 
   <div class="container">
     <p class="text-center buildup-text buildup-text-white"> Learn more about how we work!</p>
@@ -1302,36 +1362,40 @@ complete into something we love.</p>
 
 </div>
 
+<div class="contactus-parallax">
+	<div class="contactus-parallax-overlay">
+		<div class="container bg-grey contact-text">
+		
+			<p class="text-center buildup-text buildup-text-white slideanim-Y"> We would love to hear from you!</p>
+			<h2 class="text-center header-padding header-text white-header slideanim-Y">CONTACT</h2>
+		  <div class="row">
 
- <div class="container bg-grey">
-	
-	<p class="text-center buildup-text slideanim-Y"> We would love to hear from you!</p>
-	<h2 class="text-center header-padding header-text slideanim-Y">CONTACT</h2>
-  <div class="row">
+			<div class="col-sm-7 slideanim-X">
+			  <div class="row">
+				<div class="col-sm-6 form-group">
+				  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+				</div>
+				<div class="col-sm-6 form-group">
+				  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+				</div>
+			  </div>
+			  <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+			  <div class="row">
+				<div class="col-sm-12 form-group">
+				  <button class="btn btn-success text-right" type="submit">Send</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-5 slideanim-X-inv">
+			  <p>Contact us and we'll get back to you soon!</p>
+			  <p><span class="glyphicon glyphicon-map-marker"></span> London, UK</p>
+			  <p><span class="glyphicon glyphicon-phone"></span> +44 1515151515</p>
+			</div>
+		  </div>
+		</div> 
+	</div>
+</div>
 
-    <div class="col-sm-7 slideanim-X">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-success text-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-	<div class="col-sm-5 slideanim-X-inv">
-      <p>Contact us and we'll get back to you soon!</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> London, UK</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +44 1515151515</p>
-    </div>
-  </div>
-</div> 
 
 
 <!-- FOOTER -->
